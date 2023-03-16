@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,800;1,600;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;   
+     box-sizing:content-box;
+    color:#000000;
+}
+
+/*-----------------------------------------hero page-----------------------------------------------------*/
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(252, 171, 100, 0.5)), url(/Images/Image.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 6px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 7px;
+    color:#000000 ;
+} 
+nav ul {
+  flex: 1;
+  text-align: right;
+  padding: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 5px 25px;
+}
+nav ul li a{
+    text-decoration:none;
+    color:#000000;
+    font-weight: 600;
+    position: relative;
+ 
+} 
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #c9f700;
+    transition: width 0.3s;
+}
+nav ul li a:hover::after{
+    width: 50%;
+
+}
+
+/*Hero content*/
+.text-box{
+  color: #000000;
+  position: absolute;
+  bottom:30%;
+} 
+.text-box p{
+  font-size: 40px;
+  font-weight: 300;
+  margin-left: 80px;
+}
+.text-box h1 {
+  font-size: 60px;
+  line-height: 80px;
+  margin-left: 80px;
+}
+.text-box h2{
+  font-size: 30px;
+  font-weight: 150;
+  margin-left: 80px;
+}
+.text-box .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-left: 80px;
+}
+.text-box a{
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: 2px solid #000000;
+}
+.row a:hover{
+  background-color: #c9f700;
+} 
+.name {
+    color: #000000;
+} 
+
+@media only screen and (max-width:1024px){
+  body {
+    margin: 0;
+    padding: 0; 
+  }
+  .hero {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(252, 171, 100, 0.5)), url(/Images/Image.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 6px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+nav ul {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+} 
+
+/*hero content*/
+.text-box{
+  color: #000000;
+  position: absolute;
+  bottom:25%;
+} 
+.text-box p{
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 80px;
+} 
+.text-box h1 {
+  font-size: 30px;
+  line-height: 35px;
+  margin-left: 80px;
+}
+.text-box h2{
+  font-size: 20px;
+  font-weight: 150;
+  margin-left: 80px;
+}
+/*--------------------------------------------education----------------------------------------------*/
+.Edu h2{
+  font-size: 1rem;
+  font-weight: 400;
+}
+.para{
+  width: 60%;
+  margin-top: 10px;
+  font-size: 1rem;
+} 
+/*----contact----*/
+.form-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #C8B8DB;
+  margin: 0%;
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  grid-template-rows: repeat(1fr);
+  grid-template-areas: 
+  "form  map map"
+  "form  map map"
+  "form  map map"
+  "icon icon icon";
+}
+.contact {
+  grid-area: form;
+}
+.Contact{
+  width: 5cm;
+  padding: 15px 15px;
+  margin-left: 70px;
+  margin-top: 10px;
+ }
+ label {
+  width: 35px;
+} 
+input, textarea, select  {
+  padding: 1px;
+  margin: 5px;
+  font-size: 10px;
+  color: #000000;
+  border-radius: 3px;
+  border: 2.5px solid #000000;
+  width: 4cm;
+} 
+
+input#submit{
+margin: 7px;
+color:white;
+font-size: 15px;
+font-weight: 550;
+padding: 2px;
+background-color: rgb(3, 3, 3);
+height: 1cm;
+cursor: pointer;
+} 
+input#submit:hover{
+  background-color: #c9f700;
+  color: #000000;
+}
+h3 {
+  font-size: 25px;
+  text-align:left;
+  padding-bottom: 10px;
+  color: #000000;
+}
+.maps {
+  grid-area: map;
+}
+.social-icons {
+  grid-area: icon;
+  justify-content: end;
+  display: inline-block;
+}
+iframe {
+  width: 300px;
+  height: 150px;
+  justify-content: center;
+  margin-top: 120px;
+  border-radius: 3%;
+} 
+}
+@media only screen and (max-width:768px) {
+  body {
+    margin: 0;
+    padding: 0; 
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 6px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+}
+
+}
+/*------------------------------------------Education-----------------------------------------------*/
+ .Education {
+    width: 100%;
+    height: 100vh;
+    background: #fafafa;
+    position: relative;
+    padding: 80px;
+    margin: 0%;
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(1fr);
+    grid-template-areas: 
+    "edu edu edu"
+    "edu edu edu"
+    "edu edu pic pic"
+    "edu edu pic pic";
+}
+
+.Edu {
+  grid-area: edu;
+  top: 40px;
+  left: 70px;
+} 
+.Edu h2{
+  font-size: 4rem;
+  font-weight: 700;
+}
+.para{
+  width: 60%;
+  margin-top: 20px;
+  font-size: 1.5rem;
+} 
+
+.Quali {
+  width: 60%;
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+.Quali li {
+  list-style:none ;
+}
+
+/*----------------------------------------------Experience section styling----------------------------------*/
+
+.Experience {
+    width: 100%;
+    height: 100vh;
+    background-color: #C8B8DB;
+    margin: 0%;
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(1fr);
+    grid-template-areas: 
+    "exp exp exp"
+    "exp exp exp"
+    "exp exp pic pic"
+    "exp exp pic pic"
+}
+.Exp {
+  grid-area: exp;
+  position: absolute;
+  top: 20px;
+  left: 70px;
+}
+.Exp h2 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.IEC h3{
+  margin-top: 5px;
+  font-size: 2.5rem;
+}
+.cont{
+  width: 60%;
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+.cont li{
+  list-style:none;
+}
+.Tutor h3{
+  margin-top: 20px;
+  font-size: 2.5rem;
+}
+.ent{
+  width: 60%;
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+.ent li{
+  list-style:none;
+}
+/*----------------------------------------Skills section styling------------------------------------------*/
+
+.Skills {
+  width: 100%;
+  height: 100vh;
+  background-color: #fafafa ;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.Mite {
+  position: absolute;
+  top: 60px;
+  left: 70px;
+} 
+.Mite h2{
+  font-size: 4rem;
+  font-weight: 900;
+} 
+.s-kills{
+  width: 100%;
+  margin-top: 1px;
+  font-size: 1.5rem;
+} 
+.s-kills li{
+  list-style:none ;
+}
+
+
+/*----------------------------------------------Footer section styling--------------------------------------*/
+.form-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #C8B8DB;
+  margin: 0%;
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  grid-template-rows: repeat(1fr);
+  grid-template-areas: 
+  "form  map map"
+  "form  map map"
+  "form  icon icon"
+  "form  icon icon";
+}  
+.contact {
+  grid-area: form;
+
+}
+.maps {
+  grid-area: map;
+  display: inline-block;
+}
+iframe{
+  width: 500px;
+  height: 300px;
+  margin-top: 110px;
+  margin-left: 150px;
+  border-radius: 6%;
+}
+.social-icons {
+  grid-area: icon;
+  justify-content: end;
+  display: inline-block;
+}
+
+.Contact{
+ width: 10cm;
+ padding: 15px 15px;
+ margin-left: 70px;
+ margin-top: 50px;
+}
+label {
+  width: 70px;
+  
+} 
+input, textarea, select  {
+  padding: 2px;
+  margin: 5px;
+  font-size: 10px;
+  color: #000000;
+  border-radius: 7px;
+  border: 2.5px solid #000000;
+  width: 8cm;
+} 
+option{
+ color: #000000;
+ cursor: pointer;
+}
+input#submit{
+margin: 7px;
+color:white;
+font-size: 25px;
+font-weight: 550;
+padding: 2px;
+background-color: rgb(3, 3, 3);
+height: 1.2cm;
+cursor: pointer;
+} 
+input#submit:hover{
+  background-color: #c9f700;
+  color: #000000;
+}
+h3 {
+  font-size: 25px;
+  text-align:left;
+  padding-bottom: 10px;
+  color: #000000;
+}
